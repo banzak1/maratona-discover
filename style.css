@@ -1,8 +1,11 @@
 /*Global ==================*/
 :root {
     --dark-blue: #363f5f;
+    --ligth-blue: #969cb3;
     --light-green:  #49aa26;
     --dark-green: #2d4a22;
+    --expense: #ce0808;
+    --income: #12a454;
 }
 * {
     margin: 0;
@@ -45,11 +48,11 @@ header {
 
 /*Balance ==================*/
 #balance {
-    margin-top: -8rem;
+    margin-top: -8.5rem;
 }
 
 #balance h2 {
-    color: #white; 
+    color: white; 
 }
 
 /*Cards ====================*/
@@ -80,7 +83,59 @@ header {
     color: white;
 }
 
+/*Table ===================*/
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: var(--ligth-blue);
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{  /*Primeiro filho de cada table*/
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead th {
+    background: white;
+
+    font-weight: normal;
+    padding: 1rem 2rem;
+
+    text-align: left; 
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+
+
+table td{
+    background: white;
+
+    padding: 1rem 2rem;
+    font-weight: normal;
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color:var(--income);
+}
+td.expense {
+    color: var(--expense);
+}
 /*Footer ===================*/
 footer {
     text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue);
+
+    opacity: 0.6;
 }
